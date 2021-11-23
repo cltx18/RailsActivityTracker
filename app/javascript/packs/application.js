@@ -9,6 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "chartkick/chart.js"
 
+const Chart = require('chart.js')
 
 require("chartkick")
 require("chart.js")
