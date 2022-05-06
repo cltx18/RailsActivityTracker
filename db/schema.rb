@@ -101,28 +101,6 @@ ActiveRecord::Schema.define(version: 2022_01_12_031233) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "installs", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_installs_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
-  end
-
-  create_table "inventories", force: :cascade do |t|
-    t.string "name"
-    t.string "amount"
-    t.string "category"
-    t.string "location"
-    t.date "date_added"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "amount"
@@ -153,7 +131,7 @@ ActiveRecord::Schema.define(version: 2022_01_12_031233) do
     t.string "intensity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.date "date"
+    t.date "string"
     t.string "day"
   end
 
